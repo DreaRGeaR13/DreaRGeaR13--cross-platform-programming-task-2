@@ -40,14 +40,14 @@ class Main(QDialog):
             if x >= 5:
                 answer = (5*(a*a + b*b))/(x-4);
             else:
-                answer = (6*a*b)/(5*x);
+                answer = (6*a*b)-(5*x);
 
             self.label_answer.setText('Ответ: ' + str(format(answer, '.2f')))
-            self.label_answer.setStyleSheet("QLabel { background-color: green  }")
+            self.label_answer.setStyleSheet("QLabel { background-color: yellow  }")
         except:
             self.label_answer.setText(
                 'Ошибка!')
-            self.label_answer.setStyleSheet("QLabel { background-color: white }")
+            self.label_answer.setStyleSheet("QLabel { background-color: red }")
 
     # Процедура очистки данных
     def clear(self):
